@@ -41,7 +41,13 @@ export default function Account({ data }) {
           {data ? (
             <Typography
               sx={{ fontWeight: "900", fontSize: "20px" }}
-              color={"green"}
+              color={
+                data?.balance > 0
+                  ? "green"
+                  : data?.balance == 0
+                  ? "orange"
+                  : "red"
+              }
             >
               ₹{data?.balance}
             </Typography>
