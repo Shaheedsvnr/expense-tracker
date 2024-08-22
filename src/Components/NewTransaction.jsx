@@ -121,7 +121,6 @@ export default function NewTransaction({
             variant="standard"
           />
           <TextField
-            autoFocus
             required
             margin="dense"
             onChange={(e) => {
